@@ -1,6 +1,6 @@
 services:
   haproxy:
-    image: haproxy:3.2-alpine
+    image: haproxy:3.2
     container_name: www-render-haproxy
     restart: unless-stopped
     expose:
