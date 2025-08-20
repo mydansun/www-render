@@ -2,3 +2,5 @@
 .venv
 compose.yml
 compose.yaml
+nginx.conf
+haproxy.cfg
