@@ -1,0 +1,25 @@
+x-rendertron-base: &rendertron-base
+  image: dockette/rendertron
+  tmpfs:
+    - /tmp:rw,size=512m,mode=1777
+  shm_size: "1g"
+  restart: unless-stopped
+  logging:
+    options:
+      max-size: "1m"
+
+services:
+  www-render-0:
+    <<: *rendertron-base
+    ports:
+      - "3000:3000"
+
+  www-render-1:
+    <<: *rendertron-base
+    ports:
+      - "3001:3000"
+
+  www-render-2:
+    <<: *rendertron-base
+    ports:
+      - "3002:3000"

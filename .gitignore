@@ -1,0 +1,4 @@
+/.idea
+.venv
+compose.yml
+compose.yaml
